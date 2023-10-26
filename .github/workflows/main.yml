@@ -41,6 +41,7 @@ jobs:
     - name: Install SonarCloud scanner
       if: steps.cache-sonar-scanner.outputs.cache-hit != 'true'
       run: |
+          cd 2fabackend
           mkdir .sonar
           cd .sonar
           mkdir scanner
@@ -53,7 +54,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Needed to get PR information, if any
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
       run: |
-          .sonar/scanner/dotnet-sonarscanner begin /k:"BartPelsma_2FA-Backend" /o:"bartpelsma" /d:sonar.token="${{ secrets.SONAR_TOKEN }}" /d:sonar.host.url="https://sonarcloud.io"
           cd 2fabackend
+          .sonar/scanner/dotnet-sonarscanner begin /k:"BartPelsma_2FA-Backend" /o:"bartpelsma" /d:sonar.token="${{ secrets.SONAR_TOKEN }}" /d:sonar.host.url="https://sonarcloud.io"
           dotnet build ./2fabackend
           .sonar/scanner/dotnet-sonarscanner end /d:sonar.token="${{ secrets.SONAR_TOKEN }}"
