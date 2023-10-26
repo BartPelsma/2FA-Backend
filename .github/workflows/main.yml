@@ -56,5 +56,5 @@ jobs:
       run: |
           cd 2fabackend
           .sonar/scanner/dotnet-sonarscanner begin /k:"BartPelsma_2FA-Backend" /o:"bartpelsma" /d:sonar.token="${{ secrets.SONAR_TOKEN }}" /d:sonar.host.url="https://sonarcloud.io"
-          dotnet build ./2fabackend
+          dotnet build
           .sonar/scanner/dotnet-sonarscanner end /d:sonar.token="${{ secrets.SONAR_TOKEN }}"
