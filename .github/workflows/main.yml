@@ -25,12 +25,10 @@ jobs:
 
     - name: SonarCloud Scan
       run: |
-        cd 2fabackend
         dotnet tool install --global dotnet-sonarscanner
-        dotnet sonarscanner begin /k:"BartPelsma_2FA-Backend" /d:sonar.login="$SONAR_TOKEN" /d:sonar.host.url="https://sonarcloud.io" /o:<bartpelsma>
-        dotnet build --configuration Release
-        dotnet sonarscanner end /d:sonar.login="$SONAR_TOKEN"
-
+        dotnet sonarscanner begin /k:"$SONAR_PROJECT_KEY" /d:sonar.host.url="https://sonarcloud.io" /o:bartpelsma
+        dotnet build --configuration Release ./2fabackend
+        dotnet sonarscanner end
       env:
         SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
         SONAR_PROJECT_KEY: ${{ secrets.SONAR_PROJECT_KEY }}
