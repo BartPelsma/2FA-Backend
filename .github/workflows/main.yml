@@ -27,7 +27,7 @@ jobs:
       run: |
         cd 2fabackend
         dotnet tool install --global dotnet-sonarscanner
-        dotnet sonarscanner begin /k:"$SONAR_PROJECT_KEY" /d:sonar.login="$SONAR_TOKEN" /d:sonar.host.url="https://sonarcloud.io" /o:<bartpelsma>
+        dotnet sonarscanner begin /k:"BartPelsma_2FA-Backend" /d:sonar.login="$SONAR_TOKEN" /d:sonar.host.url="https://sonarcloud.io" /o:<bartpelsma>
         dotnet build --configuration Release
         dotnet sonarscanner end /d:sonar.login="$SONAR_TOKEN"
 
