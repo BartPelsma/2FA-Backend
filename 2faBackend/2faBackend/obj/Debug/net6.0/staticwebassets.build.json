@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "yfTjAiasIoLwET/uS8fxOwy4MAawxojvgO3W2kb84gw=",
+  "Source": "2faBackend",
+  "BasePath": "_content/2faBackend",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
