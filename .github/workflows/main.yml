@@ -1,0 +1,26 @@
+name: ASP.NET CI/CD
+
+on:
+  push:
+    branches:
+      - main  # Voer de workflow uit wanneer er wijzigingen worden gepusht naar de 'main'-tak
+
+jobs:
+  build:
+    runs-on: windows-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v1
+      with:
+        dotnet-version: 7.0.400
+
+    - name: Build
+      run: |
+        cd 2fabackend
+        dotnet build --configuration Release
+
+
