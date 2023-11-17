@@ -16,7 +16,8 @@
       "launchUrl": "swagger",
       "applicationUrl": "https://localhost:7156;http://localhost:5217",
       "environmentVariables": {
-        "ASPNETCORE_ENVIRONMENT": "Development"
+        "ASPNETCORE_ENVIRONMENT": "Development",
+        "ConnectionStrings__DefaultConnection": "Server=mssqlstud.fhict.local;Database=dbi454075_2fa;User Id=dbi454075_2fa;Password=2fa;"
       }
     },
     "IIS Express": {
@@ -24,8 +25,12 @@
       "launchBrowser": true,
       "launchUrl": "swagger",
       "environmentVariables": {
-        "ASPNETCORE_ENVIRONMENT": "Development"
+        "ASPNETCORE_ENVIRONMENT": "Development",
+        "ConnectionStrings__DefaultConnection": "Server=mssqlstud.fhict.local;Database=dbi454075_2fa;User Id=dbi454075_2fa;Password=2fa;"
       }
     }
+  },
+  "ConnectionStrings": {
+    "DefaultConnection": "Server=mssqlstud.fhict.local;Database=dbi454075_2fa;User Id=dbi454075_2fa;Password=2fa;"
   }
 }

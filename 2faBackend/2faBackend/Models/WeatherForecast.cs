@@ -1,4 +1,4 @@
-namespace _2faBackend
+namespace _2faBackend.Models
 {
     public class WeatherForecast
     {

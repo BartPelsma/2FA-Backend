@@ -1,3 +1,4 @@
+using _2faBackend.Models;
 using Microsoft.AspNetCore.Mvc;
 
 namespace _2faBackend.Controllers
